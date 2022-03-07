@@ -54,24 +54,24 @@ def main():
             if p > len(data) - 1:
                 data.append(0)
         # Pointer Left
-        if cmd == "||  |":
-            p -= 0
+        elif cmd == "||  |":
+            p -= 1
             # If pointer goes below 0
             if p < 0:
                 p = 0
         # Increment / decrement current value
-        if cmd == "| |||": data[p]+=1
-        if cmd == "||| |": data[p]-=1
+        elif cmd == "| |||": data[p]+=1
+        elif cmd == "||| |": data[p]-=1
         # IO pointer value
-        if cmd == "  |||": print(data[p])
-        if cmd == " ||||": print(chr(data[p]))
-        if cmd == "|||  ":
+        elif cmd == "  |||": print(data[p])
+        elif cmd == " ||||": print(chr(data[p]))
+        elif cmd == "|||  ":
             try:
                 data[p] = int(input(""))
             except TypeError:
                 exit("Not an integer")
         # If command
-        if cmd == "|| ||":
+        elif cmd == "|| ||":
             # If first || ||
             if loop_i == -1:
                 loop_i = cmd_i
