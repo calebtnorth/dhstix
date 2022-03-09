@@ -69,7 +69,7 @@ def main():
             try:
                 data[p] = int(input(""))
             except TypeError:
-                exit("Not an integer")
+                quit("Not an integer")
         # If command
         elif cmd == "|| ||":
             # If first || ||
