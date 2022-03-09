@@ -82,6 +82,9 @@ def main():
             else:
                 cmd_i = loop_i
         cmd_i+=1
+    # Wait for quit
+    print(f"FINISHED at pointer index {p}")
+    input("Press enter to kill the terminal")
 # Run Main
 if __name__ == "__main__":
     try:
